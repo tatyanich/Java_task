@@ -7,6 +7,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by Tetiana_Matiunina on 29.10.2015.
@@ -15,42 +16,38 @@ public class Serializator {
 
 
     public void serializeAirplane(String path, Airplane airplane) throws IOException {
-
-        try (OutputStream file = new FileOutputStream(path);
-             OutputStream buffer = new BufferedOutputStream(file);
-             ObjectOutput output = new ObjectOutputStream(buffer);) {
+        ObjectOutput output = null;
+        try {
+            OutputStream file = new FileOutputStream(path);
+            OutputStream buffer = new BufferedOutputStream(file);
+            output = new ObjectOutputStream(buffer);
             output.writeObject(airplane);
         } catch (IOException ex) {
-
-            throw new IOException("Couldn't write object");
+            Logger.getLogger(Serializator.class.toString()).log(Level.SEVERE, "Couldn't write object");
+        } finally {
+            if (output != null) {
+                output.close();
+            }
         }
 
     }
 
     public void deSerializeAirplane(String path) throws IOException {
+        ObjectInput input = null;
+        try {
+            InputStream file = new FileInputStream(path);
+            InputStream buffer = new BufferedInputStream(file);
+            input = new ObjectInputStream(buffer);
+            Airplane recoveredAirplane = (Airplane) input.readObject();
+            System.out.println("Recovered airplane: " + recoveredAirplane);
 
-        try (InputStream file = new FileInputStream(path);
-             InputStream buffer = new BufferedInputStream(file);
-             ObjectInput input = new ObjectInputStream(buffer);) {
-            //use buffering
-
-            Airplane airplane = (Airplane) input.readObject();
-
-            //deserialize the List
-//            List<Airplane> recoveredAirplane = (List<Airplane>) input.readObject();
-//            //display its data
-//            for (Airplane quark : recoveredAirplane) {
-               System.out.println("Recovered Quark: " + airplane);
-//
-//            }
         } catch (ClassNotFoundException ex) {
-            ex.getMessage();
-            //fLogger.log(Level.SEVERE, "Cannot perform input. Class not found.", ex);
-        } catch (IOException ex) {
-            throw new IOException("Couldn't write object");
-           // fLogger.log(Level.SEVERE, "Cannot perform input.", ex);
+            Logger.getLogger(Serializator.class.toString()).log(Level.SEVERE, ex.getMessage());
+
         } finally {
-           // input.close();
+            if (input != null) {
+                input.close();
+            }
         }
     }
 
@@ -68,11 +65,11 @@ public class Serializator {
             e.printStackTrace();
         }
         try {
-            serializator.deSerializeAirplane("output.txt");
+            serializator.deSerializeAirplane("outpdfgdut.txt");
             serializator.deSerializeAirplane("output1.txt");
             serializator.deSerializeAirplane("output2.txt");
         } catch (IOException e) {
-            e.printStackTrace();
+            Logger.getLogger(Serializator.class.toString()).log(Level.INFO, e.getMessage());
         }
     }
 
