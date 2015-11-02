@@ -9,7 +9,7 @@ import java.util.*;
 import java.util.logging.Logger;
 
 /**
- * Created by Администратор on 22.10.2015.
+ * Created by Tetiana_Matiunina on 22.10.2015.
  */
 public class Program {
     private Date programStart;
@@ -39,6 +39,7 @@ public class Program {
      * @return list courses of program
      */
     public List<Course> addCourses(List<Course> courses) {
+
         for (Course course : courses) {
             this.courses.add(course);
         }

@@ -1,12 +1,12 @@
 package com.epam.tetiana_matiunina.java.lesson3.task3;
 
 import java.util.ArrayList;
-import java.util.Calendar;
+
 import java.util.Date;
 import java.util.List;
 
 /**
- * Created by Matiunina on 22.10.2015.
+ * Created by Tetiana_Matiunina on 22.10.2015.
  */
 public class TrainingCenter {
 
@@ -18,13 +18,13 @@ public class TrainingCenter {
         courses.add(course1);
         courses.add(course2);
 
-        Program program1 = new Program("Java program", "28/14/2015 10:00");
+        Program program1 = new Program("Java program", "12/10/2015 10:00");
         program1.addCourses(courses);
 
         program1.calculateEndDate();
         stud1.setProgram(program1);
         Report report = new Report(stud1);
-        System.out.println(report.reporting());
+        System.out.println(report.reporting(1, new Date()));
 
     }
 }

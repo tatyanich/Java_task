@@ -1,7 +1,7 @@
 package com.epam.tetiana_matiunina.java.lesson3.task3;
 
 /**
- * Created by Администратор on 22.10.2015.
+ * Created by Tetiana_Matiunina on 22.10.2015.
  */
 public class Student {
     private String studentName;
