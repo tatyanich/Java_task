@@ -1,0 +1,33 @@
+2015-11-10 00:08:00 INFO  ServletContext:31 - Context initialized
+2015-11-10 00:08:38 DEBUG RegistrationController:90 - Passowrfiald11111111
+2015-11-10 00:08:38 DEBUG RegistrationController:92 - CPassowrfiald11111111
+2015-11-10 00:08:38 DEBUG RegistrationController:59 -  User{firstName='Tanya', secondName='matiunina', loginName='tatyanich', email='tanya301293@gmail.com', password='11111111', confirmPassword='11111111', female=}
+2015-11-10 00:08:38 DEBUG PasswordValidator:18 - Password password 11111111
+2015-11-10 00:08:38 DEBUG PasswordValidator:19 - Confirm confirmPassword 11111111  11111111
+2015-11-10 00:08:38 DEBUG NameValidator:16 - Password firstName Tanya
+2015-11-10 00:08:38 DEBUG NameValidator:16 - Password lastName matiunina
+2015-11-10 00:08:38 DEBUG NameValidator:17 - Password email tanya301293@gmail.com
+2015-11-10 00:08:38 DEBUG LoginValidator:18 - Password login tatyanich
+2015-11-10 00:08:38 DEBUG RegistrationController:108 -  validator.ValidatorContext@6f962957
+2015-11-10 00:08:38 DEBUG PasswordValidator:22 - Is valid 11111111 8
+2015-11-10 00:08:38 DEBUG PasswordValidator:23 - Passwordtrue
+2015-11-10 00:08:38 DEBUG NameValidator:20 - Is valid Tanya 5
+2015-11-10 00:08:38 DEBUG NameValidator:21 - NAME true
+2015-11-10 00:08:38 DEBUG NameValidator:20 - Is valid matiunina 9
+2015-11-10 00:08:38 DEBUG NameValidator:21 - NAME true
+2015-11-10 00:08:38 DEBUG NameValidator:21 - Is valid tanya301293@gmail.com 21
+2015-11-10 00:08:38 DEBUG NameValidator:22 - true
+2015-11-10 00:08:38 DEBUG LoginValidator:22 - Is valid tatyanich 9
+2015-11-10 00:08:38 DEBUG LoginValidator:23 - true
+2015-11-10 00:08:38 DEBUG RegistrationController:61 - Error {}
+2015-11-10 00:08:38 DEBUG UserService:27 - Users vanich  tatyanich
+2015-11-10 00:08:55 DEBUG LoginController:54 -  User{firstName='null', secondName='null', loginName='tatyanich', email='null', password='11111111', confirmPassword='null', female=null}
+2015-11-10 00:08:55 DEBUG PasswordValidator:18 - Password password 11111111
+2015-11-10 00:08:55 DEBUG LoginValidator:18 - Password login tatyanich
+2015-11-10 00:08:55 DEBUG LoginController:97 -  validator.ValidatorContext@74f86833
+2015-11-10 00:08:55 DEBUG PasswordValidator:22 - Is valid 11111111 8
+2015-11-10 00:08:55 DEBUG PasswordValidator:23 - Passwordtrue
+2015-11-10 00:08:55 DEBUG LoginValidator:22 - Is valid tatyanich 9
+2015-11-10 00:08:55 DEBUG LoginValidator:23 - true
+2015-11-10 00:08:55 DEBUG LoginController:67 - Invalid input params {}
+2015-11-10 00:09:10 INFO  ServletContext:37 - Context destroyed

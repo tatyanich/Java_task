@@ -1,0 +1,11 @@
+table{
+
+    table-layout: fixed;
+    width: auto;
+}
+
+th, td {
+margin: 0px;
+    overflow: hidden;
+    width: auto;
+}
